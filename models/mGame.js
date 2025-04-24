@@ -5,7 +5,7 @@ const gameSchema = new mongoose.Schema({
   location: { type: String, required: true },
   date: { type: String, required: true },
   startedTime: { type: String, required: true },
-  status: { type: String, required: true, default: "Em Andamento"},
+  status: { type: Boolean, required: true, default: false},
   startOffense: { type: String, required: true },
   startDefense: { type: String, required: true },
   startOffenseScore: { type: Number, required: true, default:0 },
