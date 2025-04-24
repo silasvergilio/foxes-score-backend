@@ -2,6 +2,15 @@ const express = require("express");
 const router = express.Router();
 const Game = require("../models/mGame");
 const mongoose = require("mongoose");
+const app = require("../app");
+const { createServer } = require("node:http");
+const server = createServer();
+const io = require("socket.io")(server, {
+  cors: {
+    origin: "https:/localhost:4200",
+    methods: ["GET", "POST"],
+  },
+});
 mongoose.connect(
   "mongodb+srv://thidupin:EhHKF01cna6uvx6n@dupin.98uvxt6.mongodb.net/foxes-score?retryWrites=true&w=majority"
 );
@@ -37,5 +46,36 @@ router.get("/", async function (req, res) {
   var games = await Game.find({"date":req.query.date, "tournament":req.query.tournament});
   res.status(200).json(games);
 });
+
+router.put("/", async function (req, res) {
+  const { _id, ...updates } = req.body;
+
+  if (!_id) {
+    return res.status(400).json({ error: "_id do jogo é obrigatório" });
+  }
+
+  try {
+    // busca o jogo pelo ID
+    const game = await Game.findById(_id);
+
+    if (!game) {
+      return res.status(404).json({ error: "Jogo não encontrado" });
+    }
+
+    // aplica as atualizações recebidas
+    Object.assign(game, updates);
+
+    // salva no banco
+    await game.save();
+
+    io.emit("gameUpdate", game);
+
+    res.status(200).json({ message: "Jogo atualizado com sucesso!", game });
+  } catch (error) {
+    console.error("Erro ao atualizar jogo: ", error);
+    res.status(500).json({ error: "Erro ao atualizar jogo" });
+  }
+});
+
 
 module.exports = router;
