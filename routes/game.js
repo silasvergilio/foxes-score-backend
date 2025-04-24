@@ -12,6 +12,7 @@ router.use(express.json());
 //criando a rota POST /game
 router.post("/", async function (req, res) {
   const gameData = req.body;
+  
 
   //criando um novo jogo
   const game = new Game(gameData);

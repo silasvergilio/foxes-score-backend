@@ -25,6 +25,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+app.use(
+  cors({
+    origin: "*",
+    methods: ["POST", "PUT", "GET", "OPTIONS", "HEAD", "DELETE"],
+  })
+);
+
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/game",gameRouter);
@@ -34,13 +41,7 @@ app.use(function (req, res, next) {
   next(createError(404));
 });
 
-app.use(
-  cors({
-    origin: ["http://localhost:4200", "http://localhost:8080"],
-    methods: ["POST", "PUT", "GET", "OPTIONS", "HEAD", "DELETE"],
-    credentials: true,
-  })
-);
+
 
 // error handler
 app.use(function (err, req, res, next) {
@@ -65,23 +66,23 @@ io.on("connection", (socket) => {
 
   io.emit("gameUpdate",{
     id: '1',
-    tournament: "CBA A",
-    location: "Ibiúna",
-    date: "24/04/25",
-    time: "10:00",
-    status: "In Progress",
-    awayTeam: "UnderDogs",
-    homeTeam: "Foxes academy",
-    awayScore: 10,
-    homeScore: 6,
+    tournament: 'CBA AA',
+    location: 'ANC',
+    date: '13/04/2025',
+    startedTime: '09:00',
+    status: 'ativo',
+    startOffense: 'Foxes',
+    startDefense: 'Underdogs',
+    startOffenseScore: 5,
+    startDefenseScore: 3,
     firstBaseRunner: false,
     secondBaseRunner: true,
     thirdBaseRunner: false,
-    balls: 0,
-    strikes: 0,
-    outs: 0,
+    balls: 3,
+    strikes: 2,
+    outs: 1,
     inning: 1,
-    inningHalf: 'Top',
+    inningHalf: true,
   });
 });
 
