@@ -23,9 +23,10 @@ router.post("/", async function (req, res) {
   const gameData = req.body;
 
   //criando um novo jogo
-  const game = new Game(gameData);
 
   try {
+    const game = new Game(gameData);
+
     //Salvando o Game
     game.save().then(() => {
       console.log(game);
@@ -43,7 +44,11 @@ router.post("/", async function (req, res) {
   }
 });
 router.get("/", async function (req, res) {
-  var games = await Game.find({"date":req.query.date, "tournament":req.query.tournament});
+
+  
+
+
+  var games = await Game.find(req.query);
   res.status(200).json(games);
 });
 
