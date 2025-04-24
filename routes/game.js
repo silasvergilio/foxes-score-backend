@@ -18,7 +18,7 @@ router.post("/", async function (req, res) {
   const game = new Game(gameData);
 
   try {
-    //logando no console
+    //Salvando o Game
     game.save().then(() => {
       console.log(game);
       return res.status(201).json({ message: "Jogo salvo com sucesso!", game });
@@ -33,6 +33,10 @@ router.post("/", async function (req, res) {
     // se der ruim avisa o anotador
     return this.report.status(500).json({ error: "Erro ao salvar jogo " });
   }
+});
+router.get("/", async function (req, res) {
+  var games = await Game.find({"date":req.query.date, "tournament":req.query.tournament});
+  res.status(200).json(games);
 });
 
 module.exports = router;
