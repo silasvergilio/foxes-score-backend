@@ -71,8 +71,7 @@ router.put("/", async function (req, res) {
     Object.assign(game, updates);
 
     // salva no banco
-    await game.save();
-
+    await Game.updateOne(req.body);
     io.emit("gameUpdate", game);
 
     res.status(200).json({ message: "Jogo atualizado com sucesso!", game });
