@@ -61,29 +61,10 @@ const io = require("socket.io")(server, {
   },
 });
 
+app.set('io', io);
+
 io.on("connection", (socket) => {
   console.log("new connection");
-
-  io.emit("gameUpdate",{
-    id: '1',
-    tournament: 'CBA AA',
-    location: 'ANC',
-    date: '13/04/2025',
-    startedTime: '09:00',
-    status: 'ativo',
-    startOffense: 'Foxes',
-    startDefense: 'Underdogs',
-    startOffenseScore: 5,
-    startDefenseScore: 3,
-    firstBaseRunner: false,
-    secondBaseRunner: true,
-    thirdBaseRunner: false,
-    balls: 3,
-    strikes: 2,
-    outs: 1,
-    inning: 1,
-    inningHalf: true,
-  });
 });
 
 server.listen(3000, () => {

@@ -5,12 +5,6 @@ const mongoose = require("mongoose");
 const app = require("../app");
 const { createServer } = require("node:http");
 const server = createServer();
-const io = require("socket.io")(server, {
-  cors: {
-    origin: "https:/localhost:4200",
-    methods: ["GET", "POST"],
-  },
-});
 mongoose.connect(
   "mongodb+srv://thidupin:EhHKF01cna6uvx6n@dupin.98uvxt6.mongodb.net/foxes-score?retryWrites=true&w=majority"
 );
@@ -44,15 +38,13 @@ router.post("/", async function (req, res) {
   }
 });
 router.get("/", async function (req, res) {
-
-  
-
-
   var games = await Game.find(req.query);
   res.status(200).json(games);
 });
 
 router.put("/", async function (req, res) {
+  const io = req.app.get('io'); // pega o socket.io do app
+
   const { _id, ...updates } = req.body;
 
   if (!_id) {
@@ -80,6 +72,5 @@ router.put("/", async function (req, res) {
     res.status(500).json({ error: "Erro ao atualizar jogo" });
   }
 });
-
 
 module.exports = router;
