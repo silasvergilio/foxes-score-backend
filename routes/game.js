@@ -43,6 +43,24 @@ router.post("/", async function (req, res) {
     return this.report.status(500).json({ error: "Erro ao salvar jogo " });
   }
 });
+
+router.get("/:id", async function (req, res) {
+  const id = req.params.id;
+
+  try {
+    const game = await Game.findById(id);
+
+    if (!game) {
+      return res.status(404).json({ error: "Jogo não encontrado" });
+    }
+
+    res.status(200).json(game);
+  } catch (error) {
+    console.error("Erro ao buscar jogo por ID: ", error);
+    res.status(500).json({ error: "Erro ao buscar jogo" });
+  }
+});
+
 router.get("/", async function (req, res) {
 
   
