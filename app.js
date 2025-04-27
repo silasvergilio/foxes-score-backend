@@ -27,21 +27,19 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(
   cors({
-    origin: "*",
+    origin: ["localhost:4200", "https://foxes-score-front.vercel.app"],
     methods: ["POST", "PUT", "GET", "OPTIONS", "HEAD", "DELETE"],
   })
 );
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-app.use("/game",gameRouter);
+app.use("/game", gameRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
 });
-
-
 
 // error handler
 app.use(function (err, req, res, next) {
@@ -56,15 +54,14 @@ app.use(function (err, req, res, next) {
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: "https:/localhost:4200",
+    origin: ["https:/localhost:4200", "https://foxes-score-front.vercel.app"],
     methods: ["GET", "POST"],
   },
 });
 
-app.set('io', io);
+app.set("io", io);
 
-io.on("connection", (socket) => {
-});
+io.on("connection", (socket) => {});
 
 server.listen(process.env.PORT || 3000, () => {
   console.log("server running at http://localhost:3000");
