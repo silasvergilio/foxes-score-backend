@@ -64,7 +64,6 @@ const io = require("socket.io")(server, {
 app.set('io', io);
 
 io.on("connection", (socket) => {
-  console.log("new connection");
 });
 
 server.listen(3000, () => {
