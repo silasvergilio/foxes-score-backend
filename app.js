@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(
   cors({
-    origin: ["localhost:4200", "https://foxes-score-front.vercel.app"],
+    origin: "*",
     methods: ["POST", "PUT", "GET", "OPTIONS", "HEAD", "DELETE"],
   })
 );
