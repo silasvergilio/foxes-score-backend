@@ -61,7 +61,7 @@ router.get("/", async function (req, res) {
 });
 
 router.put("/", async function (req, res) {
-  const io = req.app.get('io'); // pega o socket.io do app
+  const io = req.app.get("io"); // pega o socket.io do app
 
   const { _id, ...updates } = req.body;
 
@@ -78,10 +78,11 @@ router.put("/", async function (req, res) {
     }
 
     // aplica as atualizações recebidas
+
     Object.assign(game, updates);
 
     // salva no banco
-    await Game.updateOne(req.body);
+    await Game.findByIdAndUpdate(_id,updates);
     io.emit("gameUpdate", game);
 
     res.status(200).json({ message: "Jogo atualizado com sucesso!", game });
