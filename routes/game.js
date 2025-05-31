@@ -83,6 +83,7 @@ router.put("/", async function (req, res) {
 
     // salva no banco
     await Game.findByIdAndUpdate(_id,updates);
+
     io.emit("gameUpdate", game);
 
     res.status(200).json({ message: "Jogo atualizado com sucesso!", game });
