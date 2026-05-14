@@ -2,20 +2,55 @@ const express = require("express");
 const router = express.Router();
 const Game = require("../models/mGame");
 
+const TEAM_FIELDS = "name code imageFile slot location";
+
 router.post("/", async function (req, res) {
   try {
     const game = new Game(req.body);
     await game.save();
-    return res.status(201).json({ message: "Jogo salvo com sucesso!", game });
+    const populated = await game.populate([
+      { path: "homeTeam", select: TEAM_FIELDS },
+      { path: "awayTeam", select: TEAM_FIELDS },
+    ]);
+    return res
+      .status(201)
+      .json({ message: "Jogo salvo com sucesso!", game: populated });
   } catch (error) {
     console.error("erro ao salvar jogo: ", error);
     return res.status(500).json({ error: "Erro ao salvar jogo" });
   }
 });
 
+// GET /game/schedule?tournament=...&status=...&from=...&to=...
+router.get("/schedule", async function (req, res) {
+  try {
+    const filter = {};
+    if (req.query.tournament) filter.tournament = req.query.tournament;
+    if (req.query.status) filter.status = req.query.status;
+    if (req.query.from || req.query.to) {
+      filter.date = {};
+      if (req.query.from) filter.date.$gte = new Date(req.query.from);
+      if (req.query.to) filter.date.$lte = new Date(req.query.to);
+    }
+
+    const games = await Game.find(filter)
+      .sort({ date: 1 })
+      .populate("homeTeam", TEAM_FIELDS)
+      .populate("awayTeam", TEAM_FIELDS)
+      .lean();
+
+    res.status(200).json(games);
+  } catch (error) {
+    console.error("Erro ao buscar agenda: ", error);
+    res.status(500).json({ error: "Erro ao buscar agenda" });
+  }
+});
+
 router.get("/:id", async function (req, res) {
   try {
-    const game = await Game.findById(req.params.id);
+    const game = await Game.findById(req.params.id)
+      .populate("homeTeam", TEAM_FIELDS)
+      .populate("awayTeam", TEAM_FIELDS);
     if (!game) {
       return res.status(404).json({ error: "Jogo não encontrado" });
     }
@@ -28,7 +63,9 @@ router.get("/:id", async function (req, res) {
 
 router.get("/", async function (req, res) {
   try {
-    const games = await Game.find(req.query);
+    const games = await Game.find(req.query)
+      .populate("homeTeam", TEAM_FIELDS)
+      .populate("awayTeam", TEAM_FIELDS);
     res.status(200).json(games);
   } catch (error) {
     console.error("Erro ao buscar jogos: ", error);
@@ -45,7 +82,9 @@ router.put("/", async function (req, res) {
   }
 
   try {
-    const game = await Game.findByIdAndUpdate(_id, updates, { new: true });
+    const game = await Game.findByIdAndUpdate(_id, updates, { new: true })
+      .populate("homeTeam", TEAM_FIELDS)
+      .populate("awayTeam", TEAM_FIELDS);
     if (!game) {
       return res.status(404).json({ error: "Jogo não encontrado" });
     }
