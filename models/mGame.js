@@ -3,9 +3,10 @@ const mongoose = require("mongoose");
 const gameSchema = new mongoose.Schema(
   {
     tournament: { type: String, required: true },
-    date: { type: Date, required: true },
+    date: { type: Date },
     location: { type: String },
     field: { type: String },
+    round: { type: Number },
 
     homeTeam: {
       type: mongoose.Schema.Types.ObjectId,

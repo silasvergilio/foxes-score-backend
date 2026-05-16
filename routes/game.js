@@ -34,7 +34,7 @@ router.get("/schedule", async function (req, res) {
     }
 
     const games = await Game.find(filter)
-      .sort({ date: 1 })
+      .sort({ round: 1, field: 1, date: 1 })
       .populate("homeTeam", TEAM_FIELDS)
       .populate("awayTeam", TEAM_FIELDS)
       .lean();
