@@ -7,6 +7,7 @@ const gameSchema = new mongoose.Schema(
     location: { type: String },
     field: { type: String },
     round: { type: Number },
+    broadcastUrl: { type: String },
 
     homeTeam: {
       type: mongoose.Schema.Types.ObjectId,
