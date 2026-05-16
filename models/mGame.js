@@ -9,15 +9,30 @@ const gameSchema = new mongoose.Schema(
     round: { type: Number },
     broadcastUrl: { type: String },
 
+    // Which phase of the tournament. "group" = group stage; "gold" / "silver"
+    // / "bronze" = the three elimination brackets after the group stage.
+    bracket: {
+      type: String,
+      enum: ["group", "gold", "silver", "bronze"],
+      default: "group",
+      index: true,
+    },
+    // Optional label for slots inside a bracket: "semi", "final", "third".
+    // Lets the frontend distinguish a final from a semi without inferring.
+    bracketStage: {
+      type: String,
+      enum: ["semi", "final", "third"],
+    },
+
+    // Teams are optional so we can create placeholder Final / 3rd-place games
+    // with TBD opponents and fill them in once the semis resolve.
     homeTeam: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Teams",
-      required: true,
     },
     awayTeam: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Teams",
-      required: true,
     },
 
     homeScore: { type: Number, default: 0 },
