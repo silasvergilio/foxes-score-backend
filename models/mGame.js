@@ -22,6 +22,12 @@ const gameSchema = new mongoose.Schema(
     homeScore: { type: Number, default: 0 },
     awayScore: { type: Number, default: 0 },
 
+    // Runs per inning, parallel arrays. Index 0 = inning 1, etc.
+    // Length grows with the inning count; homeScore/awayScore stay as the
+    // running totals for easy display.
+    homeInnings: { type: [Number], default: [] },
+    awayInnings: { type: [Number], default: [] },
+
     status: {
       type: String,
       enum: ["scheduled", "live", "finished"],
