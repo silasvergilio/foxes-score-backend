@@ -10,18 +10,35 @@ const TEAM_FIELDS = "name code slot group imageFile location";
 // Returns standings derived from finished games. Output is grouped by `group`
 // so the frontend can render two side-by-side tables.
 //
-// Tiebreaker order: wins desc, losses asc, runDiff desc, runsScored desc.
+// Tiebreaker order:
+//   1. wins desc
+//   2. losses asc
+//   3. TQB desc      (Team Quality Balance — see below)
+//   4. runsScored desc
+//
+// TQB = (runsScored / inningsBatted) / (runsAgainst / inningsFielded)
+// Inning counts come from the per-game homeInnings/awayInnings arrays the
+// frontend already records (so a "called" game where the home team didn't
+// bat in their last half counts that asymmetry correctly).
 router.get("/", async function (req, res) {
   try {
     const filter = {};
     if (req.query.tournament) filter.tournament = req.query.tournament;
 
     const teams = await Team.find(filter, TEAM_FIELDS).lean();
-    const teamById = new Map(teams.map((t) => [String(t._id), t]));
+
+    // Only group-stage games count toward standings — bracket / playoff games
+    // are recorded separately and should not skew the group tables.
+    const finishedFilter = { ...filter, status: "finished" };
+    finishedFilter.$or = [
+      { bracket: "group" },
+      { bracket: { $exists: false } },
+      { bracket: null },
+    ];
 
     const finishedGames = await Game.find(
-      { ...filter, status: "finished" },
-      "homeTeam awayTeam homeScore awayScore"
+      finishedFilter,
+      "homeTeam awayTeam homeScore awayScore homeInnings awayInnings"
     ).lean();
 
     // Initialize a stat row per team so teams with zero games still appear.
@@ -36,6 +53,9 @@ router.get("/", async function (req, res) {
         runsScored: 0,
         runsAgainst: 0,
         runDiff: 0,
+        inningsBatted: 0,
+        inningsFielded: 0,
+        tqb: 0,
       });
     }
 
@@ -44,12 +64,26 @@ router.get("/", async function (req, res) {
       const away = stats.get(String(g.awayTeam));
       if (!home || !away) continue; // game references a team not in filter
 
+      const homeInningsCount = Array.isArray(g.homeInnings)
+        ? g.homeInnings.length
+        : 0;
+      const awayInningsCount = Array.isArray(g.awayInnings)
+        ? g.awayInnings.length
+        : 0;
+
       home.gamesPlayed++;
       away.gamesPlayed++;
       home.runsScored += g.homeScore;
       home.runsAgainst += g.awayScore;
       away.runsScored += g.awayScore;
       away.runsAgainst += g.homeScore;
+
+      // A team bats in its own innings array; it fields while the opponent
+      // bats (i.e. the opponent's innings array length).
+      home.inningsBatted += homeInningsCount;
+      home.inningsFielded += awayInningsCount;
+      away.inningsBatted += awayInningsCount;
+      away.inningsFielded += homeInningsCount;
 
       if (g.homeScore > g.awayScore) {
         home.wins++;
@@ -69,13 +103,32 @@ router.get("/", async function (req, res) {
         s.gamesPlayed === 0
           ? 0
           : Number(((s.wins + s.ties / 2) / s.gamesPlayed).toFixed(3));
+
+      // TQB. Edge cases:
+      //   - team hasn't played yet                -> tqb = 0 (will be null in JSON)
+      //   - team has played but allowed 0 runs    -> tqb = Infinity (best possible)
+      // JSON serialization turns Infinity / NaN into null, so the frontend
+      // checks runsAgainst === 0 to decide between "∞" and "—".
+      if (s.inningsBatted > 0 && s.inningsFielded > 0) {
+        const off = s.runsScored / s.inningsBatted;
+        const def = s.runsAgainst / s.inningsFielded;
+        s.tqb = def === 0 ? Infinity : off / def;
+      } else {
+        s.tqb = 0;
+      }
     }
 
-    const sortByRank = (a, b) =>
-      b.wins - a.wins ||
-      a.losses - b.losses ||
-      b.runDiff - a.runDiff ||
-      b.runsScored - a.runsScored;
+    const sortByRank = (a, b) => {
+      if (b.wins !== a.wins) return b.wins - a.wins;
+      if (a.losses !== b.losses) return a.losses - b.losses;
+      // TQB. Treat Infinity above any finite, NaN as no-op (fall through).
+      if (a.tqb !== b.tqb && !Number.isNaN(a.tqb - b.tqb)) {
+        if (a.tqb === Infinity) return -1;
+        if (b.tqb === Infinity) return 1;
+        return b.tqb - a.tqb;
+      }
+      return b.runsScored - a.runsScored;
+    };
 
     // Group teams by team.group.
     const byGroup = new Map();
