@@ -18,6 +18,7 @@ const teamSchema = new mongoose.Schema({
   email: { type: String },
   division: { type: String },
   tournament: { type: String },
+  group: { type: String, index: true },
   slot: { type: String, index: true },
   coaches: { type: [coachSchema], default: [] },
 });
