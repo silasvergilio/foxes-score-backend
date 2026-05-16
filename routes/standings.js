@@ -16,10 +16,12 @@ const TEAM_FIELDS = "name code slot group imageFile location";
 //   3. TQB desc      (Team Quality Balance — see below)
 //   4. runsScored desc
 //
-// TQB = (runsScored / inningsBatted) / (runsAgainst / inningsFielded)
-// Inning counts come from the per-game homeInnings/awayInnings arrays the
-// frontend already records (so a "called" game where the home team didn't
-// bat in their last half counts that asymmetry correctly).
+// TQB = (runsScored / inningsBatted) − (runsAgainst / inningsFielded)
+// I.e. average runs per inning on offense minus average runs allowed per
+// inning on defense. Higher is better; negative values are valid. Inning
+// counts come from the per-game homeInnings/awayInnings arrays the
+// frontend already records, so a "called" game where the home team didn't
+// bat in their last half counts that asymmetry correctly.
 router.get("/", async function (req, res) {
   try {
     const filter = {};
@@ -104,29 +106,25 @@ router.get("/", async function (req, res) {
           ? 0
           : Number(((s.wins + s.ties / 2) / s.gamesPlayed).toFixed(3));
 
-      // TQB. Edge cases:
-      //   - team hasn't played yet                -> tqb = 0 (will be null in JSON)
-      //   - team has played but allowed 0 runs    -> tqb = Infinity (best possible)
-      // JSON serialization turns Infinity / NaN into null, so the frontend
-      // checks runsAgainst === 0 to decide between "∞" and "—".
+      // TQB = offensive rate minus defensive rate. Always a finite number
+      // for any team that's played at least one inning on each side.
+      // For unplayed teams it stays null so the frontend renders "—".
       if (s.inningsBatted > 0 && s.inningsFielded > 0) {
         const off = s.runsScored / s.inningsBatted;
         const def = s.runsAgainst / s.inningsFielded;
-        s.tqb = def === 0 ? Infinity : off / def;
+        s.tqb = off - def;
       } else {
-        s.tqb = 0;
+        s.tqb = null;
       }
     }
 
     const sortByRank = (a, b) => {
       if (b.wins !== a.wins) return b.wins - a.wins;
       if (a.losses !== b.losses) return a.losses - b.losses;
-      // TQB. Treat Infinity above any finite, NaN as no-op (fall through).
-      if (a.tqb !== b.tqb && !Number.isNaN(a.tqb - b.tqb)) {
-        if (a.tqb === Infinity) return -1;
-        if (b.tqb === Infinity) return 1;
-        return b.tqb - a.tqb;
-      }
+      // TQB. Null (no games played) sorts last among tied W/L.
+      const at = a.tqb ?? -Infinity;
+      const bt = b.tqb ?? -Infinity;
+      if (at !== bt) return bt - at;
       return b.runsScored - a.runsScored;
     };
 
