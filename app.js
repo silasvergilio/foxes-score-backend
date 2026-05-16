@@ -13,6 +13,7 @@ const usersRouter = require("./routes/users");
 const gameRouter = require("./routes/game");
 const playerRouter = require("./routes/player");
 const teamsRouter = require("./routes/teams");
+const standingsRouter = require("./routes/standings");
 
 const app = express();
 
@@ -41,6 +42,7 @@ app.use("/users", usersRouter);
 app.use("/game", gameRouter);
 app.use("/player", playerRouter);
 app.use("/teams", teamsRouter);
+app.use("/standings", standingsRouter);
 
 app.use(function (req, res, next) {
   next(createError(404));
