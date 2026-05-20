@@ -1,0 +1,1829 @@
+{
+  "thresholds": {
+    "avg_ip": 2.21,
+    "avg_ab": 2.72
+  },
+  "leaders": {
+    "pitching": [
+      {
+        "Name": "Paulo Kenzo Sakamoto",
+        "Team": "Niteroi",
+        "IP": 3.0,
+        "K": 3,
+        "K_per_IP": 1.0,
+        "H": 2,
+        "H_per_IP": 0.67,
+        "ERA": 2.33,
+        "composite": 2.17
+      },
+      {
+        "Name": "Cassio Hideki Myazawa",
+        "Team": "Mavericks",
+        "IP": 4.67,
+        "K": 8,
+        "K_per_IP": 1.71,
+        "H": 9,
+        "H_per_IP": 1.93,
+        "ERA": 6.0,
+        "composite": 2.67
+      },
+      {
+        "Name": "Samuel Silva Da Rocha Reis",
+        "Team": "Piranema",
+        "IP": 7.0,
+        "K": 9,
+        "K_per_IP": 1.29,
+        "H": 14,
+        "H_per_IP": 2.0,
+        "ERA": 5.0,
+        "composite": 2.83
+      },
+      {
+        "Name": "Claudio Kenji Yamada",
+        "Team": "Highlanders",
+        "IP": 6.0,
+        "K": 6,
+        "K_per_IP": 1.0,
+        "H": 13,
+        "H_per_IP": 2.17,
+        "ERA": 5.83,
+        "composite": 4.5
+      },
+      {
+        "Name": "Giomar Alexander Vacaro Blanca",
+        "Team": "Pirituba",
+        "IP": 3.67,
+        "K": 1,
+        "K_per_IP": 0.27,
+        "H": 7,
+        "H_per_IP": 1.91,
+        "ERA": 7.63,
+        "composite": 4.67
+      },
+      {
+        "Name": "Jeffrey Jiunn Wei Lin",
+        "Team": "White Tigers",
+        "IP": 3.0,
+        "K": 2,
+        "K_per_IP": 0.67,
+        "H": 6,
+        "H_per_IP": 2.0,
+        "ERA": 11.67,
+        "composite": 5.5
+      },
+      {
+        "Name": "Alexander Ramos Rondon",
+        "Team": "Titans",
+        "IP": 5.0,
+        "K": 6,
+        "K_per_IP": 1.2,
+        "H": 13,
+        "H_per_IP": 2.6,
+        "ERA": 14.0,
+        "composite": 5.67
+      }
+    ],
+    "batting_avg": [
+      {
+        "Name": "Romulo Rebello Quedinho",
+        "Team": "Niteroi",
+        "AB": 3,
+        "H": 3,
+        "AVG": 1.0,
+        "RBI": 2
+      },
+      {
+        "Name": "Cassio Hideki Myazawa",
+        "Team": "Mavericks",
+        "AB": 3,
+        "H": 3,
+        "AVG": 1.0,
+        "RBI": 1
+      },
+      {
+        "Name": "Elisvan Da Silva Martins",
+        "Team": "Pirituba",
+        "AB": 5,
+        "H": 4,
+        "AVG": 0.8,
+        "RBI": 4
+      },
+      {
+        "Name": "Enzo Henrique Hideki Harada Costa",
+        "Team": "Highlanders",
+        "AB": 4,
+        "H": 3,
+        "AVG": 0.75,
+        "RBI": 5
+      },
+      {
+        "Name": "Claudio Kenji Yamada",
+        "Team": "Highlanders",
+        "AB": 4,
+        "H": 3,
+        "AVG": 0.75,
+        "RBI": 4
+      },
+      {
+        "Name": "Eloi Jose Marsella Gonzalez",
+        "Team": "White Tigers",
+        "AB": 4,
+        "H": 3,
+        "AVG": 0.75,
+        "RBI": 3
+      },
+      {
+        "Name": "Jose Gregorio Navarro",
+        "Team": "White Tigers",
+        "AB": 4,
+        "H": 3,
+        "AVG": 0.75,
+        "RBI": 3
+      },
+      {
+        "Name": "Claudio Alessandro Massamitsu Sakamoto",
+        "Team": "Niteroi",
+        "AB": 4,
+        "H": 3,
+        "AVG": 0.75,
+        "RBI": 1
+      },
+      {
+        "Name": "Jhonny Roberto Roman Solarte",
+        "Team": "Pirituba",
+        "AB": 4,
+        "H": 3,
+        "AVG": 0.75,
+        "RBI": 1
+      },
+      {
+        "Name": "Mateus Nishida Maximo Da Cruz",
+        "Team": "Titans",
+        "AB": 4,
+        "H": 3,
+        "AVG": 0.75,
+        "RBI": 1
+      },
+      {
+        "Name": "Cesar Pil Wuong Lee",
+        "Team": "Mavericks",
+        "AB": 4,
+        "H": 3,
+        "AVG": 0.75,
+        "RBI": 0
+      },
+      {
+        "Name": "Fabio Yuki",
+        "Team": "Highlanders",
+        "AB": 6,
+        "H": 4,
+        "AVG": 0.667,
+        "RBI": 3
+      },
+      {
+        "Name": "Alfredo Yuji Yoshida",
+        "Team": "Highlanders",
+        "AB": 3,
+        "H": 2,
+        "AVG": 0.667,
+        "RBI": 1
+      },
+      {
+        "Name": "Rodrigo Yuji Homma",
+        "Team": "Foxes",
+        "AB": 3,
+        "H": 2,
+        "AVG": 0.667,
+        "RBI": 1
+      },
+      {
+        "Name": "Fernando Toshiaki Toyoda",
+        "Team": "Mavericks",
+        "AB": 5,
+        "H": 3,
+        "AVG": 0.6,
+        "RBI": 1
+      },
+      {
+        "Name": "Tiago Moreira Carneiro",
+        "Team": "Titans",
+        "AB": 5,
+        "H": 3,
+        "AVG": 0.6,
+        "RBI": 0
+      },
+      {
+        "Name": "Marcelo Henrique Omori",
+        "Team": "Highlanders",
+        "AB": 4,
+        "H": 2,
+        "AVG": 0.5,
+        "RBI": 3
+      },
+      {
+        "Name": "Rodrigo Terada De Oliveira",
+        "Team": "White Tigers",
+        "AB": 4,
+        "H": 2,
+        "AVG": 0.5,
+        "RBI": 3
+      },
+      {
+        "Name": "Gerson Thurler Pereira",
+        "Team": "Piranema",
+        "AB": 4,
+        "H": 2,
+        "AVG": 0.5,
+        "RBI": 2
+      },
+      {
+        "Name": "Jolnel David Aparicio Chaparro",
+        "Team": "Niteroi",
+        "AB": 4,
+        "H": 2,
+        "AVG": 0.5,
+        "RBI": 2
+      },
+      {
+        "Name": "Fabricio Floriano Garcia Dos Santos",
+        "Team": "White Tigers",
+        "AB": 4,
+        "H": 2,
+        "AVG": 0.5,
+        "RBI": 1
+      },
+      {
+        "Name": "Vitor Mizota",
+        "Team": "Highlanders",
+        "AB": 7,
+        "H": 3,
+        "AVG": 0.429,
+        "RBI": 1
+      },
+      {
+        "Name": "Alexander Ramos Rondon",
+        "Team": "Titans",
+        "AB": 5,
+        "H": 2,
+        "AVG": 0.4,
+        "RBI": 2
+      },
+      {
+        "Name": "Maycon Santana Matsunaga",
+        "Team": "Piranema",
+        "AB": 5,
+        "H": 2,
+        "AVG": 0.4,
+        "RBI": 2
+      },
+      {
+        "Name": "Samuel Silva Da Rocha Reis",
+        "Team": "Piranema",
+        "AB": 5,
+        "H": 2,
+        "AVG": 0.4,
+        "RBI": 2
+      },
+      {
+        "Name": "Guilherme Hideyoshi Uehara",
+        "Team": "Titans",
+        "AB": 5,
+        "H": 2,
+        "AVG": 0.4,
+        "RBI": 0
+      },
+      {
+        "Name": "Hanser Ferrer Alvares",
+        "Team": "Mavericks",
+        "AB": 3,
+        "H": 1,
+        "AVG": 0.333,
+        "RBI": 4
+      },
+      {
+        "Name": "Andre Roberto Boian Conno",
+        "Team": "Niteroi",
+        "AB": 3,
+        "H": 1,
+        "AVG": 0.333,
+        "RBI": 2
+      },
+      {
+        "Name": "Eduardo Takahashi Garcia",
+        "Team": "Foxes",
+        "AB": 3,
+        "H": 1,
+        "AVG": 0.333,
+        "RBI": 0
+      },
+      {
+        "Name": "Jackson Cheng",
+        "Team": "Foxes",
+        "AB": 3,
+        "H": 1,
+        "AVG": 0.333,
+        "RBI": 0
+      },
+      {
+        "Name": "Marcelo Yamashita Takahashi",
+        "Team": "White Tigers",
+        "AB": 3,
+        "H": 1,
+        "AVG": 0.333,
+        "RBI": 0
+      },
+      {
+        "Name": "Diego Masayuki Nishio",
+        "Team": "Piranema",
+        "AB": 4,
+        "H": 1,
+        "AVG": 0.25,
+        "RBI": 3
+      },
+      {
+        "Name": "Vitor Massato Izu",
+        "Team": "White Tigers",
+        "AB": 4,
+        "H": 1,
+        "AVG": 0.25,
+        "RBI": 1
+      },
+      {
+        "Name": "Felipe Matsunaga",
+        "Team": "Piranema",
+        "AB": 4,
+        "H": 1,
+        "AVG": 0.25,
+        "RBI": 0
+      },
+      {
+        "Name": "Leonardo Makoto Suyama",
+        "Team": "Mavericks",
+        "AB": 4,
+        "H": 1,
+        "AVG": 0.25,
+        "RBI": 0
+      },
+      {
+        "Name": "Julio Cesar Goncalves Da Silva",
+        "Team": "Pirituba",
+        "AB": 5,
+        "H": 1,
+        "AVG": 0.2,
+        "RBI": 0
+      },
+      {
+        "Name": "Aldemy De Oliveira Siqueira Junior",
+        "Team": "Titans",
+        "AB": 3,
+        "H": 0,
+        "AVG": 0.0,
+        "RBI": 1
+      },
+      {
+        "Name": "Caio Tadashi Da Silva Nishio",
+        "Team": "Piranema",
+        "AB": 3,
+        "H": 0,
+        "AVG": 0.0,
+        "RBI": 1
+      },
+      {
+        "Name": "Antonio Pereira Da Silva",
+        "Team": "Pirituba",
+        "AB": 3,
+        "H": 0,
+        "AVG": 0.0,
+        "RBI": 0
+      },
+      {
+        "Name": "Charles Takeshi Kuramoto",
+        "Team": "Niteroi",
+        "AB": 4,
+        "H": 0,
+        "AVG": 0.0,
+        "RBI": 0
+      },
+      {
+        "Name": "Daniel Nejelschi",
+        "Team": "Foxes",
+        "AB": 3,
+        "H": 0,
+        "AVG": 0.0,
+        "RBI": 0
+      },
+      {
+        "Name": "Fernando Augusto Machado Correa",
+        "Team": "Piranema",
+        "AB": 3,
+        "H": 0,
+        "AVG": 0.0,
+        "RBI": 0
+      },
+      {
+        "Name": "Gabriel Da Silva",
+        "Team": "Pirituba",
+        "AB": 3,
+        "H": 0,
+        "AVG": 0.0,
+        "RBI": 0
+      },
+      {
+        "Name": "Helio Hideki Sato",
+        "Team": "Piranema",
+        "AB": 4,
+        "H": 0,
+        "AVG": 0.0,
+        "RBI": 0
+      },
+      {
+        "Name": "Wellington Fernandes",
+        "Team": "Foxes",
+        "AB": 3,
+        "H": 0,
+        "AVG": 0.0,
+        "RBI": 0
+      },
+      {
+        "Name": "Weverton Nascimento Da Silva",
+        "Team": "Pirituba",
+        "AB": 3,
+        "H": 0,
+        "AVG": 0.0,
+        "RBI": 0
+      }
+    ],
+    "rbi": [
+      {
+        "Name": "Enzo Henrique Hideki Harada Costa",
+        "Team": "Highlanders",
+        "RBI": 5
+      },
+      {
+        "Name": "Raydel Ricardo Rodrigues Garcia",
+        "Team": "Mavericks",
+        "RBI": 4
+      },
+      {
+        "Name": "Claudio Kenji Yamada",
+        "Team": "Highlanders",
+        "RBI": 4
+      },
+      {
+        "Name": "Elisvan Da Silva Martins",
+        "Team": "Pirituba",
+        "RBI": 4
+      },
+      {
+        "Name": "Hanser Ferrer Alvares",
+        "Team": "Mavericks",
+        "RBI": 4
+      },
+      {
+        "Name": "Diego Masayuki Nishio",
+        "Team": "Piranema",
+        "RBI": 3
+      },
+      {
+        "Name": "Rodrigo Terada De Oliveira",
+        "Team": "White Tigers",
+        "RBI": 3
+      },
+      {
+        "Name": "Eloi Jose Marsella Gonzalez",
+        "Team": "White Tigers",
+        "RBI": 3
+      },
+      {
+        "Name": "Fabio Yuki",
+        "Team": "Highlanders",
+        "RBI": 3
+      },
+      {
+        "Name": "Felipe Tadao Rocha Inakake",
+        "Team": "Foxes",
+        "RBI": 3
+      }
+    ],
+    "runs": [
+      {
+        "Name": "Cassio Hideki Myazawa",
+        "Team": "Mavericks",
+        "R": 5
+      },
+      {
+        "Name": "Alfredo Yuji Yoshida",
+        "Team": "Highlanders",
+        "R": 4
+      },
+      {
+        "Name": "Jose Gregorio Navarro",
+        "Team": "White Tigers",
+        "R": 4
+      },
+      {
+        "Name": "Felipe Matsunaga",
+        "Team": "Piranema",
+        "R": 3
+      },
+      {
+        "Name": "Fernando Toshiaki Toyoda",
+        "Team": "Mavericks",
+        "R": 3
+      },
+      {
+        "Name": "Enzo Henrique Hideki Harada Costa",
+        "Team": "Highlanders",
+        "R": 3
+      },
+      {
+        "Name": "Gerson Thurler Pereira",
+        "Team": "Piranema",
+        "R": 3
+      },
+      {
+        "Name": "Rodrigo Yuji Homma",
+        "Team": "Foxes",
+        "R": 3
+      },
+      {
+        "Name": "Mateus Nishida Maximo Da Cruz",
+        "Team": "Titans",
+        "R": 3
+      },
+      {
+        "Name": "Vitor Mizota",
+        "Team": "Highlanders",
+        "R": 3
+      }
+    ],
+    "stolen_bases": [
+      {
+        "Name": "Felipe Matsunaga",
+        "Team": "Piranema",
+        "SB": 3,
+        "R": 3
+      },
+      {
+        "Name": "Eduardo Hernandez",
+        "Team": "Highlanders",
+        "SB": 3,
+        "R": 2
+      },
+      {
+        "Name": "Elisvan Da Silva Martins",
+        "Team": "Pirituba",
+        "SB": 3,
+        "R": 1
+      },
+      {
+        "Name": "Caio Tadashi Da Silva Nishio",
+        "Team": "Piranema",
+        "SB": 2,
+        "R": 2
+      },
+      {
+        "Name": "Victor Ian Chaves Wildhagen",
+        "Team": "Piranema",
+        "SB": 2,
+        "R": 0
+      },
+      {
+        "Name": "Cesar Pil Wuong Lee",
+        "Team": "Mavericks",
+        "SB": 1,
+        "R": 3
+      },
+      {
+        "Name": "Fernando Toshiaki Toyoda",
+        "Team": "Mavericks",
+        "SB": 1,
+        "R": 3
+      },
+      {
+        "Name": "Gerson Thurler Pereira",
+        "Team": "Piranema",
+        "SB": 1,
+        "R": 3
+      },
+      {
+        "Name": "Helio Hideki Sato",
+        "Team": "Piranema",
+        "SB": 1,
+        "R": 3
+      },
+      {
+        "Name": "Mateus Nishida Maximo Da Cruz",
+        "Team": "Titans",
+        "SB": 1,
+        "R": 3
+      },
+      {
+        "Name": "Maycon Santana Matsunaga",
+        "Team": "Piranema",
+        "SB": 1,
+        "R": 3
+      },
+      {
+        "Name": "Rodrigo Yuji Homma",
+        "Team": "Foxes",
+        "SB": 1,
+        "R": 3
+      },
+      {
+        "Name": "Eloi Jose Marsella Gonzalez",
+        "Team": "White Tigers",
+        "SB": 1,
+        "R": 2
+      },
+      {
+        "Name": "Fabricio Floriano Garcia Dos Santos",
+        "Team": "White Tigers",
+        "SB": 1,
+        "R": 2
+      },
+      {
+        "Name": "Julio Cesar Goncalves Da Silva",
+        "Team": "Pirituba",
+        "SB": 1,
+        "R": 2
+      },
+      {
+        "Name": "Marcelo Henrique Omori",
+        "Team": "Highlanders",
+        "SB": 1,
+        "R": 2
+      },
+      {
+        "Name": "Romulo Rebello Quedinho",
+        "Team": "Niteroi",
+        "SB": 1,
+        "R": 2
+      },
+      {
+        "Name": "Samuel Silva Da Rocha Reis",
+        "Team": "Piranema",
+        "SB": 1,
+        "R": 2
+      },
+      {
+        "Name": "Tiago Moreira Carneiro",
+        "Team": "Titans",
+        "SB": 1,
+        "R": 2
+      },
+      {
+        "Name": "Alex Davi Silva De Oliveira",
+        "Team": "Pirituba",
+        "SB": 1,
+        "R": 1
+      },
+      {
+        "Name": "Anderson Katsujiro Aoyagi",
+        "Team": "Titans",
+        "SB": 1,
+        "R": 1
+      },
+      {
+        "Name": "Antonio Pereira Da Silva",
+        "Team": "Pirituba",
+        "SB": 1,
+        "R": 1
+      },
+      {
+        "Name": "Diego Masayuki Nishio",
+        "Team": "Piranema",
+        "SB": 1,
+        "R": 1
+      },
+      {
+        "Name": "Fabio Ryoiti Okamura",
+        "Team": "Titans",
+        "SB": 1,
+        "R": 1
+      },
+      {
+        "Name": "Raphael Vasconcellos",
+        "Team": "White Tigers",
+        "SB": 1,
+        "R": 1
+      },
+      {
+        "Name": "Raydel Ricardo Rodrigues Garcia",
+        "Team": "Mavericks",
+        "SB": 1,
+        "R": 1
+      },
+      {
+        "Name": "Rogerio Vieira Silva",
+        "Team": "Foxes",
+        "SB": 1,
+        "R": 1
+      },
+      {
+        "Name": "Weverton Nascimento Da Silva",
+        "Team": "Pirituba",
+        "SB": 1,
+        "R": 1
+      },
+      {
+        "Name": "Edilson Pereira Da Silva",
+        "Team": "Pirituba",
+        "SB": 1,
+        "R": 0
+      },
+      {
+        "Name": "Giomar Alexander Vacaro Blanca",
+        "Team": "Pirituba",
+        "SB": 1,
+        "R": 0
+      },
+      {
+        "Name": "Jose Claudio Bezerra De Lacerda",
+        "Team": "Pirituba",
+        "SB": 1,
+        "R": 0
+      },
+      {
+        "Name": "Kassio Alves De Almeida Silva",
+        "Team": "Mavericks",
+        "SB": 1,
+        "R": 0
+      },
+      {
+        "Name": "Lucas Menezes Coutinho",
+        "Team": "Niteroi",
+        "SB": 1,
+        "R": 0
+      },
+      {
+        "Name": "Marcus Vinicius Oliveira Neves Cunha",
+        "Team": "Mavericks",
+        "SB": 1,
+        "R": 0
+      },
+      {
+        "Name": "Nicolas Martins Cordeiro Rodrigues",
+        "Team": "Pirituba",
+        "SB": 1,
+        "R": 0
+      }
+    ]
+  },
+  "byTeam": {
+    "Foxes": {
+      "pitching": [],
+      "batting_avg": [
+        {
+          "Name": "Rodrigo Yuji Homma",
+          "AB": 3,
+          "H": 2,
+          "AVG": 0.667,
+          "RBI": 1
+        },
+        {
+          "Name": "Eduardo Takahashi Garcia",
+          "AB": 3,
+          "H": 1,
+          "AVG": 0.333,
+          "RBI": 0
+        },
+        {
+          "Name": "Jackson Cheng",
+          "AB": 3,
+          "H": 1,
+          "AVG": 0.333,
+          "RBI": 0
+        },
+        {
+          "Name": "Daniel Nejelschi",
+          "AB": 3,
+          "H": 0,
+          "AVG": 0.0,
+          "RBI": 0
+        },
+        {
+          "Name": "Wellington Fernandes",
+          "AB": 3,
+          "H": 0,
+          "AVG": 0.0,
+          "RBI": 0
+        }
+      ],
+      "rbi": [
+        {
+          "Name": "Felipe Tadao Rocha Inakake",
+          "RBI": 3
+        },
+        {
+          "Name": "Rogerio Vieira Silva",
+          "RBI": 2
+        },
+        {
+          "Name": "Rodrigo Yuji Homma",
+          "RBI": 1
+        }
+      ],
+      "runs": [
+        {
+          "Name": "Rodrigo Yuji Homma",
+          "R": 3
+        },
+        {
+          "Name": "Jackson Cheng",
+          "R": 1
+        },
+        {
+          "Name": "Felipe Tadao Rocha Inakake",
+          "R": 1
+        },
+        {
+          "Name": "Rogerio Vieira Silva",
+          "R": 1
+        },
+        {
+          "Name": "Eduardo Takahashi Garcia",
+          "R": 1
+        },
+        {
+          "Name": "Raeder Carvalho",
+          "R": 1
+        }
+      ],
+      "stolen_bases": [
+        {
+          "Name": "Rodrigo Yuji Homma",
+          "SB": 1,
+          "R": 3
+        },
+        {
+          "Name": "Rogerio Vieira Silva",
+          "SB": 1,
+          "R": 1
+        }
+      ]
+    },
+    "Highlanders": {
+      "pitching": [
+        {
+          "Name": "Claudio Kenji Yamada",
+          "IP": 6.0,
+          "K": 6,
+          "K_per_IP": 1.0,
+          "H": 13,
+          "H_per_IP": 2.17,
+          "ERA": 5.83,
+          "composite": 4.5
+        }
+      ],
+      "batting_avg": [
+        {
+          "Name": "Enzo Henrique Hideki Harada Costa",
+          "AB": 4,
+          "H": 3,
+          "AVG": 0.75,
+          "RBI": 5
+        },
+        {
+          "Name": "Claudio Kenji Yamada",
+          "AB": 4,
+          "H": 3,
+          "AVG": 0.75,
+          "RBI": 4
+        },
+        {
+          "Name": "Fabio Yuki",
+          "AB": 6,
+          "H": 4,
+          "AVG": 0.667,
+          "RBI": 3
+        },
+        {
+          "Name": "Alfredo Yuji Yoshida",
+          "AB": 3,
+          "H": 2,
+          "AVG": 0.667,
+          "RBI": 1
+        },
+        {
+          "Name": "Marcelo Henrique Omori",
+          "AB": 4,
+          "H": 2,
+          "AVG": 0.5,
+          "RBI": 3
+        },
+        {
+          "Name": "Vitor Mizota",
+          "AB": 7,
+          "H": 3,
+          "AVG": 0.429,
+          "RBI": 1
+        }
+      ],
+      "rbi": [
+        {
+          "Name": "Enzo Henrique Hideki Harada Costa",
+          "RBI": 5
+        },
+        {
+          "Name": "Claudio Kenji Yamada",
+          "RBI": 4
+        },
+        {
+          "Name": "Fabio Yuki",
+          "RBI": 3
+        },
+        {
+          "Name": "Marcelo Henrique Omori",
+          "RBI": 3
+        },
+        {
+          "Name": "Carlos Hideo Yamada",
+          "RBI": 1
+        },
+        {
+          "Name": "Alfredo Yuji Yoshida",
+          "RBI": 1
+        },
+        {
+          "Name": "Mauricio Yukiyoshi Fukuda",
+          "RBI": 1
+        },
+        {
+          "Name": "Felipe Betschart",
+          "RBI": 1
+        },
+        {
+          "Name": "Vitor Mizota",
+          "RBI": 1
+        }
+      ],
+      "runs": [
+        {
+          "Name": "Alfredo Yuji Yoshida",
+          "R": 4
+        },
+        {
+          "Name": "Enzo Henrique Hideki Harada Costa",
+          "R": 3
+        },
+        {
+          "Name": "Vitor Mizota",
+          "R": 3
+        },
+        {
+          "Name": "Felipe Betschart",
+          "R": 3
+        },
+        {
+          "Name": "Fabio Yuki",
+          "R": 3
+        },
+        {
+          "Name": "Claudio Kenji Yamada",
+          "R": 2
+        },
+        {
+          "Name": "Eduardo Hernandez",
+          "R": 2
+        },
+        {
+          "Name": "Mauricio Yukiyoshi Fukuda",
+          "R": 2
+        },
+        {
+          "Name": "Marcelo Henrique Omori",
+          "R": 2
+        },
+        {
+          "Name": "Carlos Hideo Yamada",
+          "R": 1
+        }
+      ],
+      "stolen_bases": [
+        {
+          "Name": "Eduardo Hernandez",
+          "SB": 3,
+          "R": 2
+        },
+        {
+          "Name": "Marcelo Henrique Omori",
+          "SB": 1,
+          "R": 2
+        }
+      ]
+    },
+    "Mavericks": {
+      "pitching": [
+        {
+          "Name": "Cassio Hideki Myazawa",
+          "IP": 4.67,
+          "K": 8,
+          "K_per_IP": 1.71,
+          "H": 9,
+          "H_per_IP": 1.93,
+          "ERA": 6.0,
+          "composite": 2.67
+        }
+      ],
+      "batting_avg": [
+        {
+          "Name": "Cassio Hideki Myazawa",
+          "AB": 3,
+          "H": 3,
+          "AVG": 1.0,
+          "RBI": 1
+        },
+        {
+          "Name": "Cesar Pil Wuong Lee",
+          "AB": 4,
+          "H": 3,
+          "AVG": 0.75,
+          "RBI": 0
+        },
+        {
+          "Name": "Fernando Toshiaki Toyoda",
+          "AB": 5,
+          "H": 3,
+          "AVG": 0.6,
+          "RBI": 1
+        },
+        {
+          "Name": "Hanser Ferrer Alvares",
+          "AB": 3,
+          "H": 1,
+          "AVG": 0.333,
+          "RBI": 4
+        },
+        {
+          "Name": "Leonardo Makoto Suyama",
+          "AB": 4,
+          "H": 1,
+          "AVG": 0.25,
+          "RBI": 0
+        }
+      ],
+      "rbi": [
+        {
+          "Name": "Raydel Ricardo Rodrigues Garcia",
+          "RBI": 4
+        },
+        {
+          "Name": "Hanser Ferrer Alvares",
+          "RBI": 4
+        },
+        {
+          "Name": "Fernando Toshiaki Toyoda",
+          "RBI": 1
+        },
+        {
+          "Name": "Ciro Rafael Basanta Solano",
+          "RBI": 1
+        },
+        {
+          "Name": "Cassio Hideki Myazawa",
+          "RBI": 1
+        },
+        {
+          "Name": "Ronnal Gregorick",
+          "RBI": 1
+        }
+      ],
+      "runs": [
+        {
+          "Name": "Cassio Hideki Myazawa",
+          "R": 5
+        },
+        {
+          "Name": "Fernando Toshiaki Toyoda",
+          "R": 3
+        },
+        {
+          "Name": "Cesar Pil Wuong Lee",
+          "R": 3
+        },
+        {
+          "Name": "Raydel Ricardo Rodrigues Garcia",
+          "R": 1
+        },
+        {
+          "Name": "Hanser Ferrer Alvares",
+          "R": 1
+        }
+      ],
+      "stolen_bases": [
+        {
+          "Name": "Cesar Pil Wuong Lee",
+          "SB": 1,
+          "R": 3
+        },
+        {
+          "Name": "Fernando Toshiaki Toyoda",
+          "SB": 1,
+          "R": 3
+        },
+        {
+          "Name": "Raydel Ricardo Rodrigues Garcia",
+          "SB": 1,
+          "R": 1
+        },
+        {
+          "Name": "Kassio Alves De Almeida Silva",
+          "SB": 1,
+          "R": 0
+        },
+        {
+          "Name": "Marcus Vinicius Oliveira Neves Cunha",
+          "SB": 1,
+          "R": 0
+        }
+      ]
+    },
+    "Niteroi": {
+      "pitching": [
+        {
+          "Name": "Paulo Kenzo Sakamoto",
+          "IP": 3.0,
+          "K": 3,
+          "K_per_IP": 1.0,
+          "H": 2,
+          "H_per_IP": 0.67,
+          "ERA": 2.33,
+          "composite": 2.17
+        }
+      ],
+      "batting_avg": [
+        {
+          "Name": "Romulo Rebello Quedinho",
+          "AB": 3,
+          "H": 3,
+          "AVG": 1.0,
+          "RBI": 2
+        },
+        {
+          "Name": "Claudio Alessandro Massamitsu Sakamoto",
+          "AB": 4,
+          "H": 3,
+          "AVG": 0.75,
+          "RBI": 1
+        },
+        {
+          "Name": "Jolnel David Aparicio Chaparro",
+          "AB": 4,
+          "H": 2,
+          "AVG": 0.5,
+          "RBI": 2
+        },
+        {
+          "Name": "Andre Roberto Boian Conno",
+          "AB": 3,
+          "H": 1,
+          "AVG": 0.333,
+          "RBI": 2
+        },
+        {
+          "Name": "Charles Takeshi Kuramoto",
+          "AB": 4,
+          "H": 0,
+          "AVG": 0.0,
+          "RBI": 0
+        }
+      ],
+      "rbi": [
+        {
+          "Name": "Jolnel David Aparicio Chaparro",
+          "RBI": 2
+        },
+        {
+          "Name": "Romulo Rebello Quedinho",
+          "RBI": 2
+        },
+        {
+          "Name": "Andre Roberto Boian Conno",
+          "RBI": 2
+        },
+        {
+          "Name": "Eric Eiji Kinigami",
+          "RBI": 1
+        },
+        {
+          "Name": "Claudio Alessandro Massamitsu Sakamoto",
+          "RBI": 1
+        }
+      ],
+      "runs": [
+        {
+          "Name": "Eric Eiji Kinigami",
+          "R": 2
+        },
+        {
+          "Name": "Romulo Rebello Quedinho",
+          "R": 2
+        },
+        {
+          "Name": "Andre Roberto Boian Conno",
+          "R": 2
+        },
+        {
+          "Name": "Jolnel David Aparicio Chaparro",
+          "R": 1
+        },
+        {
+          "Name": "Nelson Yuji",
+          "R": 1
+        },
+        {
+          "Name": "Felipe Carneiro Da Silva Manhaes",
+          "R": 1
+        },
+        {
+          "Name": "Charles Takeshi Kuramoto",
+          "R": 1
+        },
+        {
+          "Name": "Claudio Alessandro Massamitsu Sakamoto",
+          "R": 1
+        }
+      ],
+      "stolen_bases": [
+        {
+          "Name": "Romulo Rebello Quedinho",
+          "SB": 1,
+          "R": 2
+        },
+        {
+          "Name": "Lucas Menezes Coutinho",
+          "SB": 1,
+          "R": 0
+        }
+      ]
+    },
+    "Piranema": {
+      "pitching": [
+        {
+          "Name": "Samuel Silva Da Rocha Reis",
+          "IP": 7.0,
+          "K": 9,
+          "K_per_IP": 1.29,
+          "H": 14,
+          "H_per_IP": 2.0,
+          "ERA": 5.0,
+          "composite": 2.83
+        }
+      ],
+      "batting_avg": [
+        {
+          "Name": "Gerson Thurler Pereira",
+          "AB": 4,
+          "H": 2,
+          "AVG": 0.5,
+          "RBI": 2
+        },
+        {
+          "Name": "Maycon Santana Matsunaga",
+          "AB": 5,
+          "H": 2,
+          "AVG": 0.4,
+          "RBI": 2
+        },
+        {
+          "Name": "Samuel Silva Da Rocha Reis",
+          "AB": 5,
+          "H": 2,
+          "AVG": 0.4,
+          "RBI": 2
+        },
+        {
+          "Name": "Diego Masayuki Nishio",
+          "AB": 4,
+          "H": 1,
+          "AVG": 0.25,
+          "RBI": 3
+        },
+        {
+          "Name": "Felipe Matsunaga",
+          "AB": 4,
+          "H": 1,
+          "AVG": 0.25,
+          "RBI": 0
+        },
+        {
+          "Name": "Caio Tadashi Da Silva Nishio",
+          "AB": 3,
+          "H": 0,
+          "AVG": 0.0,
+          "RBI": 1
+        },
+        {
+          "Name": "Fernando Augusto Machado Correa",
+          "AB": 3,
+          "H": 0,
+          "AVG": 0.0,
+          "RBI": 0
+        },
+        {
+          "Name": "Helio Hideki Sato",
+          "AB": 4,
+          "H": 0,
+          "AVG": 0.0,
+          "RBI": 0
+        }
+      ],
+      "rbi": [
+        {
+          "Name": "Diego Masayuki Nishio",
+          "RBI": 3
+        },
+        {
+          "Name": "Gerson Thurler Pereira",
+          "RBI": 2
+        },
+        {
+          "Name": "Maycon Santana Matsunaga",
+          "RBI": 2
+        },
+        {
+          "Name": "Samuel Silva Da Rocha Reis",
+          "RBI": 2
+        },
+        {
+          "Name": "Caio Tadashi Da Silva Nishio",
+          "RBI": 1
+        }
+      ],
+      "runs": [
+        {
+          "Name": "Felipe Matsunaga",
+          "R": 3
+        },
+        {
+          "Name": "Gerson Thurler Pereira",
+          "R": 3
+        },
+        {
+          "Name": "Maycon Santana Matsunaga",
+          "R": 3
+        },
+        {
+          "Name": "Helio Hideki Sato",
+          "R": 3
+        },
+        {
+          "Name": "Samuel Silva Da Rocha Reis",
+          "R": 2
+        },
+        {
+          "Name": "Caio Tadashi Da Silva Nishio",
+          "R": 2
+        },
+        {
+          "Name": "Diego Masayuki Nishio",
+          "R": 1
+        }
+      ],
+      "stolen_bases": [
+        {
+          "Name": "Felipe Matsunaga",
+          "SB": 3,
+          "R": 3
+        },
+        {
+          "Name": "Caio Tadashi Da Silva Nishio",
+          "SB": 2,
+          "R": 2
+        },
+        {
+          "Name": "Victor Ian Chaves Wildhagen",
+          "SB": 2,
+          "R": 0
+        },
+        {
+          "Name": "Gerson Thurler Pereira",
+          "SB": 1,
+          "R": 3
+        },
+        {
+          "Name": "Helio Hideki Sato",
+          "SB": 1,
+          "R": 3
+        },
+        {
+          "Name": "Maycon Santana Matsunaga",
+          "SB": 1,
+          "R": 3
+        },
+        {
+          "Name": "Samuel Silva Da Rocha Reis",
+          "SB": 1,
+          "R": 2
+        },
+        {
+          "Name": "Diego Masayuki Nishio",
+          "SB": 1,
+          "R": 1
+        }
+      ]
+    },
+    "Pirituba": {
+      "pitching": [
+        {
+          "Name": "Giomar Alexander Vacaro Blanca",
+          "IP": 3.67,
+          "K": 1,
+          "K_per_IP": 0.27,
+          "H": 7,
+          "H_per_IP": 1.91,
+          "ERA": 7.63,
+          "composite": 4.67
+        }
+      ],
+      "batting_avg": [
+        {
+          "Name": "Elisvan Da Silva Martins",
+          "AB": 5,
+          "H": 4,
+          "AVG": 0.8,
+          "RBI": 4
+        },
+        {
+          "Name": "Jhonny Roberto Roman Solarte",
+          "AB": 4,
+          "H": 3,
+          "AVG": 0.75,
+          "RBI": 1
+        },
+        {
+          "Name": "Julio Cesar Goncalves Da Silva",
+          "AB": 5,
+          "H": 1,
+          "AVG": 0.2,
+          "RBI": 0
+        },
+        {
+          "Name": "Antonio Pereira Da Silva",
+          "AB": 3,
+          "H": 0,
+          "AVG": 0.0,
+          "RBI": 0
+        },
+        {
+          "Name": "Gabriel Da Silva",
+          "AB": 3,
+          "H": 0,
+          "AVG": 0.0,
+          "RBI": 0
+        },
+        {
+          "Name": "Weverton Nascimento Da Silva",
+          "AB": 3,
+          "H": 0,
+          "AVG": 0.0,
+          "RBI": 0
+        }
+      ],
+      "rbi": [
+        {
+          "Name": "Elisvan Da Silva Martins",
+          "RBI": 4
+        },
+        {
+          "Name": "Jhonny Roberto Roman Solarte",
+          "RBI": 1
+        },
+        {
+          "Name": "Alex Davi Silva De Oliveira",
+          "RBI": 1
+        }
+      ],
+      "runs": [
+        {
+          "Name": "Julio Cesar Goncalves Da Silva",
+          "R": 2
+        },
+        {
+          "Name": "Jhonny Roberto Roman Solarte",
+          "R": 1
+        },
+        {
+          "Name": "Gabriel Da Silva",
+          "R": 1
+        },
+        {
+          "Name": "Alex Davi Silva De Oliveira",
+          "R": 1
+        },
+        {
+          "Name": "Wilson Pereira Lima Costa Junior",
+          "R": 1
+        },
+        {
+          "Name": "Weverton Nascimento Da Silva",
+          "R": 1
+        },
+        {
+          "Name": "Antonio Pereira Da Silva",
+          "R": 1
+        },
+        {
+          "Name": "Welferson De Souza Lima",
+          "R": 1
+        },
+        {
+          "Name": "Elisvan Da Silva Martins",
+          "R": 1
+        }
+      ],
+      "stolen_bases": [
+        {
+          "Name": "Elisvan Da Silva Martins",
+          "SB": 3,
+          "R": 1
+        },
+        {
+          "Name": "Julio Cesar Goncalves Da Silva",
+          "SB": 1,
+          "R": 2
+        },
+        {
+          "Name": "Alex Davi Silva De Oliveira",
+          "SB": 1,
+          "R": 1
+        },
+        {
+          "Name": "Antonio Pereira Da Silva",
+          "SB": 1,
+          "R": 1
+        },
+        {
+          "Name": "Weverton Nascimento Da Silva",
+          "SB": 1,
+          "R": 1
+        },
+        {
+          "Name": "Edilson Pereira Da Silva",
+          "SB": 1,
+          "R": 0
+        },
+        {
+          "Name": "Giomar Alexander Vacaro Blanca",
+          "SB": 1,
+          "R": 0
+        },
+        {
+          "Name": "Jose Claudio Bezerra De Lacerda",
+          "SB": 1,
+          "R": 0
+        },
+        {
+          "Name": "Nicolas Martins Cordeiro Rodrigues",
+          "SB": 1,
+          "R": 0
+        }
+      ]
+    },
+    "Titans": {
+      "pitching": [
+        {
+          "Name": "Alexander Ramos Rondon",
+          "IP": 5.0,
+          "K": 6,
+          "K_per_IP": 1.2,
+          "H": 13,
+          "H_per_IP": 2.6,
+          "ERA": 14.0,
+          "composite": 5.67
+        }
+      ],
+      "batting_avg": [
+        {
+          "Name": "Mateus Nishida Maximo Da Cruz",
+          "AB": 4,
+          "H": 3,
+          "AVG": 0.75,
+          "RBI": 1
+        },
+        {
+          "Name": "Tiago Moreira Carneiro",
+          "AB": 5,
+          "H": 3,
+          "AVG": 0.6,
+          "RBI": 0
+        },
+        {
+          "Name": "Alexander Ramos Rondon",
+          "AB": 5,
+          "H": 2,
+          "AVG": 0.4,
+          "RBI": 2
+        },
+        {
+          "Name": "Guilherme Hideyoshi Uehara",
+          "AB": 5,
+          "H": 2,
+          "AVG": 0.4,
+          "RBI": 0
+        },
+        {
+          "Name": "Aldemy De Oliveira Siqueira Junior",
+          "AB": 3,
+          "H": 0,
+          "AVG": 0.0,
+          "RBI": 1
+        }
+      ],
+      "rbi": [
+        {
+          "Name": "Yasushi Okada",
+          "RBI": 2
+        },
+        {
+          "Name": "Alexander Ramos Rondon",
+          "RBI": 2
+        },
+        {
+          "Name": "Mateus Nishida Maximo Da Cruz",
+          "RBI": 1
+        },
+        {
+          "Name": "Aldemy De Oliveira Siqueira Junior",
+          "RBI": 1
+        }
+      ],
+      "runs": [
+        {
+          "Name": "Mateus Nishida Maximo Da Cruz",
+          "R": 3
+        },
+        {
+          "Name": "Tiago Moreira Carneiro",
+          "R": 2
+        },
+        {
+          "Name": "Aldemy De Oliveira Siqueira Junior",
+          "R": 2
+        },
+        {
+          "Name": "Fabio Ryoiti Okamura",
+          "R": 1
+        },
+        {
+          "Name": "Anderson Katsujiro Aoyagi",
+          "R": 1
+        },
+        {
+          "Name": "Silsmar Alves Silveira Junior",
+          "R": 1
+        }
+      ],
+      "stolen_bases": [
+        {
+          "Name": "Mateus Nishida Maximo Da Cruz",
+          "SB": 1,
+          "R": 3
+        },
+        {
+          "Name": "Tiago Moreira Carneiro",
+          "SB": 1,
+          "R": 2
+        },
+        {
+          "Name": "Anderson Katsujiro Aoyagi",
+          "SB": 1,
+          "R": 1
+        },
+        {
+          "Name": "Fabio Ryoiti Okamura",
+          "SB": 1,
+          "R": 1
+        }
+      ]
+    },
+    "White Tigers": {
+      "pitching": [
+        {
+          "Name": "Jeffrey Jiunn Wei Lin",
+          "IP": 3.0,
+          "K": 2,
+          "K_per_IP": 0.67,
+          "H": 6,
+          "H_per_IP": 2.0,
+          "ERA": 11.67,
+          "composite": 5.5
+        }
+      ],
+      "batting_avg": [
+        {
+          "Name": "Eloi Jose Marsella Gonzalez",
+          "AB": 4,
+          "H": 3,
+          "AVG": 0.75,
+          "RBI": 3
+        },
+        {
+          "Name": "Jose Gregorio Navarro",
+          "AB": 4,
+          "H": 3,
+          "AVG": 0.75,
+          "RBI": 3
+        },
+        {
+          "Name": "Rodrigo Terada De Oliveira",
+          "AB": 4,
+          "H": 2,
+          "AVG": 0.5,
+          "RBI": 3
+        },
+        {
+          "Name": "Fabricio Floriano Garcia Dos Santos",
+          "AB": 4,
+          "H": 2,
+          "AVG": 0.5,
+          "RBI": 1
+        },
+        {
+          "Name": "Marcelo Yamashita Takahashi",
+          "AB": 3,
+          "H": 1,
+          "AVG": 0.333,
+          "RBI": 0
+        },
+        {
+          "Name": "Vitor Massato Izu",
+          "AB": 4,
+          "H": 1,
+          "AVG": 0.25,
+          "RBI": 1
+        }
+      ],
+      "rbi": [
+        {
+          "Name": "Rodrigo Terada De Oliveira",
+          "RBI": 3
+        },
+        {
+          "Name": "Eloi Jose Marsella Gonzalez",
+          "RBI": 3
+        },
+        {
+          "Name": "Jose Gregorio Navarro",
+          "RBI": 3
+        },
+        {
+          "Name": "Vitor Massato Izu",
+          "RBI": 1
+        },
+        {
+          "Name": "Fabricio Floriano Garcia Dos Santos",
+          "RBI": 1
+        }
+      ],
+      "runs": [
+        {
+          "Name": "Jose Gregorio Navarro",
+          "R": 4
+        },
+        {
+          "Name": "Fabricio Floriano Garcia Dos Santos",
+          "R": 2
+        },
+        {
+          "Name": "Eloi Jose Marsella Gonzalez",
+          "R": 2
+        },
+        {
+          "Name": "Marcelo Yamashita Takahashi",
+          "R": 2
+        },
+        {
+          "Name": "Rodrigo Terada De Oliveira",
+          "R": 1
+        },
+        {
+          "Name": "Raphael Vasconcellos",
+          "R": 1
+        },
+        {
+          "Name": "Carlos Rafael Moreno Veranes",
+          "R": 1
+        }
+      ],
+      "stolen_bases": [
+        {
+          "Name": "Eloi Jose Marsella Gonzalez",
+          "SB": 1,
+          "R": 2
+        },
+        {
+          "Name": "Fabricio Floriano Garcia Dos Santos",
+          "SB": 1,
+          "R": 2
+        },
+        {
+          "Name": "Raphael Vasconcellos",
+          "SB": 1,
+          "R": 1
+        }
+      ]
+    }
+  }
+}
