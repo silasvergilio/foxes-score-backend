@@ -17,18 +17,35 @@ const playerSchema = new mongoose.Schema({
   throws: { type: String, enum: ["right", "left", "switch"] },
   bats: { type: String, enum: ["right", "left", "switch"] },
 
-  // Pitching stats, tournament-scoped (we'll scale to a separate
-  // collection if multi-season history is ever needed). Stored as-is
-  // from the official scoring source. Players who haven't pitched
-  // stay at zero across the board.
+  // Per-tournament pitching stats. Recomputed from totals by
+  // scripts/consolidate-stats.js each time the per-game iScore xlsx
+  // files change (in ~/Documents/TBA Stats), so ERA stays correct as
+  // more games are added. Players who haven't pitched stay at zero.
   pitching: {
-    G: { type: Number, default: 0 },   // games pitched
-    IP: { type: Number, default: 0 },  // innings pitched
-    R: { type: Number, default: 0 },   // runs allowed
-    ERA: { type: Number, default: 0 }, // earned run average (as scored)
-    K: { type: Number, default: 0 },   // strikeouts
-    H: { type: Number, default: 0 },   // hits allowed
-    BB: { type: Number, default: 0 },  // walks
+    G: { type: Number, default: 0 },     // games pitched
+    IP: { type: Number, default: 0 },    // innings pitched (decimal)
+    R: { type: Number, default: 0 },     // runs allowed
+    ER: { type: Number, default: 0 },    // earned runs (basis for ERA)
+    ERA: { type: Number, default: 0 },   // (ER × 7) / IP, 7-inning league
+    K: { type: Number, default: 0 },     // strikeouts
+    H: { type: Number, default: 0 },     // hits allowed
+    BB: { type: Number, default: 0 },    // walks
+  },
+
+  // Per-tournament batting stats. AVG is recomputed from totals on
+  // every consolidation pass. Non-batters stay at zero.
+  batting: {
+    G: { type: Number, default: 0 },     // games
+    PA: { type: Number, default: 0 },    // plate appearances
+    AB: { type: Number, default: 0 },    // at-bats
+    R: { type: Number, default: 0 },     // runs scored
+    H: { type: Number, default: 0 },     // hits
+    HR: { type: Number, default: 0 },    // home runs
+    RBI: { type: Number, default: 0 },   // runs batted in
+    BB: { type: Number, default: 0 },    // walks
+    SO: { type: Number, default: 0 },    // strikeouts
+    SB: { type: Number, default: 0 },    // stolen bases
+    AVG: { type: Number, default: 0 },   // H / AB
   },
 });
 
