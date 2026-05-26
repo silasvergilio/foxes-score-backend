@@ -26,6 +26,8 @@ router.get("/", async function (req, res) {
   try {
     const filter = {};
     if (req.query.tournament) filter.tournament = req.query.tournament;
+    if (req.query.year) filter.year = Number(req.query.year);
+    if (req.query.division) filter.division = String(req.query.division);
 
     const teams = await Team.find(filter, TEAM_FIELDS).lean();
 

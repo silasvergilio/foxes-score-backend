@@ -21,11 +21,13 @@ router.post("/", async function (req, res) {
   }
 });
 
-// GET /game/schedule?tournament=...&status=...&from=...&to=...
+// GET /game/schedule?tournament=...&year=...&division=...&status=...&from=...&to=...
 router.get("/schedule", async function (req, res) {
   try {
     const filter = {};
     if (req.query.tournament) filter.tournament = req.query.tournament;
+    if (req.query.year) filter.year = Number(req.query.year);
+    if (req.query.division) filter.division = String(req.query.division);
     if (req.query.status) filter.status = req.query.status;
     if (req.query.from || req.query.to) {
       filter.date = {};

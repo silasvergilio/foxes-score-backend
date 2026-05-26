@@ -32,17 +32,32 @@ function lev(a, b) {
   return dp[al][bl];
 }
 
-// GET /awards
-// Returns each award category with the winning player resolved against
-// the live roster (name, slot, imageFile, etc.) and their team info.
+// GET /awards?year=YYYY&division=N
+// Returns the award entries for the given (year, division). Defaults
+// to the latest year × division "2" if not specified so legacy callers
+// (which used to GET /awards with no params and get the flat 2026/D2
+// array) keep working.
 router.get("/", async function (req, res) {
   try {
     const raw = JSON.parse(fs.readFileSync(AWARDS_PATH, "utf8"));
-    const teams = await Team.find({});
+
+    // Pick the edition: query param wins; else latest year, division "2".
+    const years = Object.keys(raw).sort();
+    const year = req.query.year || years[years.length - 1] || "2026";
+    const division = req.query.division || "2";
+
+    const entries = (raw[year] && raw[year][division]) || [];
+
+    // Look up teams scoped to this edition so codes are unambiguous —
+    // WT in D1 is a different document from WT in D2.
+    const teams = await Team.find({
+      year: Number(year),
+      division: String(division),
+    });
     const teamByCode = new Map(teams.map((t) => [t.code, t]));
 
     const out = [];
-    for (const a of raw) {
+    for (const a of entries) {
       const team = teamByCode.get(a.team);
       const entry = {
         category: a.category,

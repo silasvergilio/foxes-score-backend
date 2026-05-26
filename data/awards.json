@@ -1,12 +1,17 @@
-[
-  { "category": "MVP",                    "team": "HIG", "player": "Claudio Kenji Yamada" },
-  { "category": "Rebatedor",              "team": "ANN", "player": "Romulo Rebello Quedinho" },
-  { "category": "Arremessador",           "team": "ANN", "player": "Paulo Kenzo Sakamoto" },
-  { "category": "Receptor",               "team": "TIT", "player": "Yassushi M. A. Okada" },
-  { "category": "Defensor Interno",       "team": "PRN", "player": "Carlos Felipe da Silva de Alvarenga" },
-  { "category": "Defensor Externo",       "team": "TIT", "player": "Aldemy de Oliveira Siqueira Júnior" },
-  { "category": "Rei do HR",              "team": "HIG", "player": "Enzo Henrique Hideki Harada Costa" },
-  { "category": "Anotador de Corridas",   "team": "MPS", "player": "Cássio Hideki Myazawa" },
-  { "category": "Empurrador de Corridas", "team": "HIG", "player": "Enzo Henrique Hideki Harada Costa" },
-  { "category": "Roubador de Bases",      "team": "PRN", "player": "Carlos Felipe da Silva de Alvarenga" }
-]
+{
+  "2026": {
+    "2": [
+      { "category": "MVP",                    "team": "HIG", "player": "Claudio Kenji Yamada" },
+      { "category": "Rebatedor",              "team": "ANN", "player": "Romulo Rebello Quedinho" },
+      { "category": "Arremessador",           "team": "ANN", "player": "Paulo Kenzo Sakamoto" },
+      { "category": "Receptor",               "team": "TIT", "player": "Yassushi M. A. Okada" },
+      { "category": "Defensor Interno",       "team": "PRN", "player": "Carlos Felipe da Silva de Alvarenga" },
+      { "category": "Defensor Externo",       "team": "TIT", "player": "Aldemy de Oliveira Siqueira Júnior" },
+      { "category": "Rei do HR",              "team": "HIG", "player": "Enzo Henrique Hideki Harada Costa" },
+      { "category": "Anotador de Corridas",   "team": "MPS", "player": "Cássio Hideki Myazawa" },
+      { "category": "Empurrador de Corridas", "team": "HIG", "player": "Enzo Henrique Hideki Harada Costa" },
+      { "category": "Roubador de Bases",      "team": "PRN", "player": "Carlos Felipe da Silva de Alvarenga" }
+    ],
+    "1": []
+  }
+}
