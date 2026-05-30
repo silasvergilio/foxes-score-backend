@@ -3,6 +3,11 @@ const mongoose = require("mongoose");
 const gameSchema = new mongoose.Schema(
   {
     tournament: { type: String, required: true },
+    // A tournament edition is uniquely identified by (year, division).
+    // year e.g. 2026; division "1" or "2". Same tournament string can span
+    // multiple editions across years (Taça Brasil Amador each year).
+    year: { type: Number, index: true },
+    division: { type: String, index: true },
     date: { type: Date },
     location: { type: String },
     field: { type: String },
@@ -67,5 +72,6 @@ const gameSchema = new mongoose.Schema(
 );
 
 gameSchema.index({ tournament: 1, date: 1 });
+gameSchema.index({ year: 1, division: 1, date: 1 });
 
 module.exports = mongoose.model("Game", gameSchema);
