@@ -1,5 +1,49 @@
 const mongoose = require("mongoose");
 
+/**
+ * Single entry on a team's lineup card. Embedded inside a Game's
+ * `homeLineup` / `awayLineup` arrays.
+ *
+ * For the starting lineup, `battingOrder` runs 1..9 (no DH), 1..10
+ * (with DH or EH), or 1..11 (DH + EH). `position` is the defensive
+ * spot the player is filling — or "DH" / "EH" for batting-only roles.
+ *
+ * Starters live in the lineup arrays; substitutes who haven't entered
+ * yet are tracked at the Player roster level — they get added here
+ * (with `isStarter: false`) when they're brought into the game.
+ *
+ * NO _id on entries: a (game, team, player) tuple is the natural key
+ * and Mongoose's array semantics keep that stable across updates.
+ */
+const lineupEntrySchema = new mongoose.Schema(
+  {
+    player: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Player",
+      required: true,
+    },
+    battingOrder: {
+      type: Number,
+      min: 1,
+      max: 12,
+    },
+    position: {
+      type: String,
+      enum: [
+        "P",  // pitcher
+        "C",  // catcher
+        "1B", "2B", "3B", "SS",
+        "LF", "CF", "RF",
+        "DH", // designated hitter (bats only)
+        "EH", // extra hitter (some leagues)
+      ],
+    },
+    /** Starters vs. bench/substitutes — starters always have battingOrder set. */
+    isStarter: { type: Boolean, default: true },
+  },
+  { _id: false }
+);
+
 const gameSchema = new mongoose.Schema(
   {
     tournament: { type: String, required: true },
@@ -67,6 +111,15 @@ const gameSchema = new mongoose.Schema(
       second: { type: Boolean, default: false },
       third: { type: Boolean, default: false },
     },
+
+    /**
+     * Starting lineup + in-game roster for each side. Set ahead of the
+     * first pitch via the frontend's lineup builder; mutated when subs
+     * enter the game. Players are Mongoose refs — the /game routes
+     * populate them as needed for display.
+     */
+    homeLineup: { type: [lineupEntrySchema], default: [] },
+    awayLineup: { type: [lineupEntrySchema], default: [] },
   },
   { timestamps: true }
 );
