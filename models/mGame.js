@@ -120,6 +120,24 @@ const gameSchema = new mongoose.Schema(
      */
     homeLineup: { type: [lineupEntrySchema], default: [] },
     awayLineup: { type: [lineupEntrySchema], default: [] },
+
+    /**
+     * Cursor into each side's starters array — points at "whose at-bat
+     * is this." Advances by 1 (modulo starter count) after every
+     * pa_result event for that side; reset to 0 on game_start.
+     */
+    homeCurrentBatterIdx: { type: Number, default: 0 },
+    awayCurrentBatterIdx: { type: Number, default: 0 },
+
+    /**
+     * Current pitcher for each side. Initialised from the lineup's
+     * `position: 'P'` slot at game_start; mutated by `substitution`
+     * events when the pitcher is swapped mid-game. Held as a player
+     * ref (not an index) because subs can bring in bench players who
+     * weren't in the original batting order.
+     */
+    homeCurrentPitcherId: { type: mongoose.Schema.Types.ObjectId, ref: "Player" },
+    awayCurrentPitcherId: { type: mongoose.Schema.Types.ObjectId, ref: "Player" },
   },
   { timestamps: true }
 );
